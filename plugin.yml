@@ -1,0 +1,14 @@
+name: HCFComplements
+version: 1.0
+main: Prxzy\Main
+author: zD3motead0
+api: 4.0.0
+
+permissions:
+  rename.command.use:
+    description: Rename Permission
+    default: op
+
+  feed.command.use:
+    desceiption: Feed Permission
+    default: op
