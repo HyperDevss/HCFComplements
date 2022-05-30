@@ -16,16 +16,16 @@ class RenameCommand extends Command {
 	public function execute(CommandSender $sender, String $label, Array $args) : void {
 	  if(!$sender->hasPermission("rename.command.use")){
             $sender->sendMessage(TextFormat::colorize("§cYou have not permissions to use this command"));
-            return;
+            return false;
 	  }
 		if(!isset($args[0])) {
 			$sender->sendMessage(TextFormat::colorize("§cYou need more arguments"));
-			return;
+			return false;
 		}
 		$item = $sender->getInventory()->getItemInHand();
 		$newName = implode(" ", $args);
 		if($item->isNull()){
-			return;
+			return false;
 		}
 		$item->clearCustomName();
 		$item->setCustomName($newName);
