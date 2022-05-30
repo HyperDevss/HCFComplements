@@ -1,5 +1,8 @@
 # HCFComplements
 
-! Rename & Feed
+- Feed
+- Health
+- Rename
+- EnderChest
 
-Plugin v1 is funcionally now
+Mas Adelante se le agregaran mas cosas
