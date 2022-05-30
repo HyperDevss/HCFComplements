@@ -1,9 +1,9 @@
 <?php
 
-namespace Prxzy;
+namespace HCFCom;
 
-use Prxzy\command\RenameCommand;
-use Prxzy\command\FeedCommand;
+use HCFCom\command\RenameCommand;
+use HCFCom\command\FeedCommand;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;

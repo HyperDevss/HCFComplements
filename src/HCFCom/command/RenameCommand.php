@@ -1,8 +1,8 @@
 <?php
 
-namespace Prxzy\Command;
+namespace HCFCom\Command;
 
-use Prxzy\Main;
+use HCFCom\Main;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
