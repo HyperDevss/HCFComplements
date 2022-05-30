@@ -19,7 +19,7 @@ class FeedCommand extends Command {
     public function execute(Commandpl $pl, string $commandLabel, array $args): void {
       if(!$pl->hasPermission("feed.command.use")) {
         $pl->sendMessage(TextFormat::colorize("§cYou don't have permission to use this command!"));
-        return false;
+        return;
       }
       $pl->getHungerManager()->setFood(20);
       $pl->sendMessage($this->prefix."Tu Barra de Comida Se Restauro!");
