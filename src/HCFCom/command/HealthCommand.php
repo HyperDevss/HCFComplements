@@ -16,7 +16,7 @@ class HealthCommand extends Command {
   
   public function execute(CommandSender $pl, string $label, array $args){
     if($pl instanceof Player){
-      if(!$pl->hasPermission("hyper.cmd.health")){
+      if(!$pl->hasPermission("health.command.use")){
         $pl->sendMessage("§l§4! §r§7Oops Al Parecer No Tienes Permisos Para Hacer Esto");
         return;
       }
