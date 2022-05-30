@@ -5,7 +5,7 @@ namespace HCFCom\Command;
 use HCFCom\Main;
 
 use pocketmine\command\Command;
-use pocketmine\command\CommandSender;
+use pocketmine\command\Commandpl;
 use pocketmine\utils\TextFormat;
 
 class RenameCommand extends Command {
@@ -16,7 +16,7 @@ class RenameCommand extends Command {
         parent::__construct("rename", "Rename your items whit this command", null, ["rm"]);
     }
     
-	public function execute(CommandSender $pl, String $label, Array $args) : void {
+	public function execute(Commandpl $pl, String $label, Array $args) : void {
 	  if(!$pl->hasPermission("rename.command.use")){
             $pl->sendMessage(TextFormat::colorize("§cYou have not permissions to use this command"));
             return false;

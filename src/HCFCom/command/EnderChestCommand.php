@@ -11,9 +11,7 @@ use muqsit\invmenu\transaction\InvMenuTransaction;
 use muqsit\invmenu\type\InvMenuTypeIds;
 use muqsit\invmenu\InvMenu;
 
-class EnderChestCommand extends Command {
-  
-  public $prefix = "§8[§5EnderChest§8] §7» ";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+class EnderChestCommand extends Command {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
   
   public function __construct(){
     parent::__construct("ender", "Open EnderChest", null, ["enderchest", "chest", "ender"]);
@@ -24,12 +22,14 @@ class EnderChestCommand extends Command {
        $menu = InvMenu::create(InvMenuTypeIds::TYPE_CHEST);
        $menu->setName("§5EnderChest");
        $inv = $menu->getInventory();
-       $inv->setContents($sender->getEnderInventory()->getContents());
-       $menu->setListener(function (InvMenuTransaction $transaction) use ($sender): InvMenuTransactionResult{
-       $sender->getEnderInventory()->setItem($transaction->getAction()->getSlot(), $transaction->getIn());
+       $inv->setContents($pl->getEnderInventory()->getContents());
+       $menu->setListener(function (InvMenuTransaction $transaction) use ($pl): InvMenuTransactionResult{
+       $pl->getEnderInventory()->setItem($transaction->getAction()->getSlot(), $transaction->getIn());
        return $transaction->continue();
        });
-       $menu->send($sender);
+       $menu->send($pl);
+    }else{
+
     }
   }
 }
