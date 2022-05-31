@@ -19,8 +19,9 @@ class EnderChestCommand extends Command {
   
   public function execute(CommandSender $pl, string $label, array $args){
     if($pl instanceof Player){
+       $name = $pl->getName();
        $menu = InvMenu::create(InvMenuTypeIds::TYPE_CHEST);
-       $menu->setName("§5EnderChest");
+       $menu->setName($name." §5EnderChest");
        $inv = $menu->getInventory();
        $inv->setContents($pl->getEnderInventory()->getContents());
        $menu->setListener(function (InvMenuTransaction $transaction) use ($pl): InvMenuTransactionResult{
