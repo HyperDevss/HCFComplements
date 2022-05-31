@@ -14,7 +14,7 @@ use muqsit\invmenu\InvMenu;
 class EnderChestCommand extends Command {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
   
   public function __construct(){
-    parent::__construct("ender", "Open EnderChest", null, ["enderchest", "chest", "ender"]);
+    parent::__construct("ender", "Open EnderChest", null, ["enderchest", "chest", "ender", "ec"]);
   }
   
   public function execute(CommandSender $pl, string $label, array $args){
